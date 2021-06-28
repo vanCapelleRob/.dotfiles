@@ -12,7 +12,7 @@ fi
 
 alias ls='ls -l --color=auto'
 alias lsa='ls -a'
-alias grep='grep --coulour=auto'
+#alias grep='grep --coulour=auto'
 alias egrep='egrep --coulour=auto'
 alias fgrep='fgrep --coulour=auto'
 
