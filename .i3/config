@@ -340,8 +340,8 @@ bar {
         # background #a1dce5
 
 		# dark with dark_wallpaper1
-		background #352b31
-		
+	#	background #352b31
+	background #000000		
         statusline #F9FAF9
         #statusline #000000
         separator  #454947
