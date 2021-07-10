@@ -43,8 +43,8 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ################################################################################################
 
 exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
-#exec --no-startup-id pulseaudio
+#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
 
@@ -328,7 +328,7 @@ bar {
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
 #	tray_output eDP1
-
+#	exec --no-startup-id xrandr --output DP-2 --primary
 	bindsym button4 nop
 	bindsym button5 nop
 #   font xft:URWGothic-Book 11
@@ -337,19 +337,22 @@ bar {
     colors {
         #background #222D31
 		# light with wallpaper1
-        # background #a1dce5
+        background #a1dce5
 
 		# dark with dark_wallpaper1
 	#	background #352b31
-	background #000000		
-        statusline #F9FAF9
-        #statusline #000000
+	#background #000000		
+        #statusline #F9FAF9
+        statusline #000000
         separator  #454947
 
 #                      border  backgr. text
-        focused_workspace  #F9FAF9 #16a085 #292F34
-        active_workspace   #595B5B #353836 #FDF6E3
-        inactive_workspace #595B5B #222D31 #EEE8D5
+        focused_workspace  #a1dce5 #a1dce5 #d12e2e
+        #focused_workspace  #F9FAF9 #16a085 #292F34
+        active_workspace   #a1dce5 #a1dce5 #333333
+        #active_workspace   #595B5B #353836 #FDF6E3
+        inactive_workspace #a1dce5 #a1dce5 #333333
+        #inactive_workspace #595B5B #222D31 #EEE8D5
         binding_mode       #16a085 #2C2C2C #F9FAF9
         urgent_workspace   #16a085 #FDF6E3 #E5201D
     }
@@ -427,4 +430,8 @@ mode "$mode_gaps_outer" {
 
 
 #exec --no-startup-id nitrogen --set-scaled /home/rob/Pictures/wallpaper1.png --head=0
-exec --no-startup-id nitrogen --set-scaled /home/rob/Pictures/dark_wallpaper1.png --head=0
+#exec --no-startup-id nitrogen --set-scaled /home/rob/Pictures/dark_wallpaper1.png --head=0
+exec --no-startup-id nitrogen --restore
+#exec --no startup-id xrandr --output HDMI-1 --auto --right-of DP-2 
+
+
